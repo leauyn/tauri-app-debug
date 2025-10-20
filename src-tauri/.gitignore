@@ -15,3 +15,4 @@ binaries/
 sidecar/nextjs-server/dist/
 sidecar/nextjs-server/.next/
 sidecar/nextjs-server/node_modules/
+binaries/node-*

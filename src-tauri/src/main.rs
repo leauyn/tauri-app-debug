@@ -65,7 +65,7 @@ async fn start_nextjs_server(
 async fn stop_nextjs_server(sidecar_state: State<'_, SidecarState>) -> Result<String, String> {
     let mut state = sidecar_state.0.lock().unwrap();
 
-    if let Some(mut child) = state.take() {
+    if let Some(child) = state.take() {
         // 注意：child 需要是 mut 才能调用 kill()
         drop(state); // 先释放锁
 

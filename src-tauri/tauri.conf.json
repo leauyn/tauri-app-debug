@@ -37,19 +37,13 @@
     "resources": [
       "binaries/nextjs-server/*"
     ],
-    "externalBin": []
+    "externalBin": [
+      "binaries/node"
+    ]
   },
   "plugins": {
     "shell": {
-      "open": true,
-      "scope": [
-        {
-          "name": "node",
-          "cmd": "node",
-          "args": true,
-          "sidecar": false
-        }
-      ]
+      "open": true
     }
   }
 }

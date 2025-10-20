@@ -55,9 +55,13 @@ if [ -d "public" ]; then
     cp -r public/* "$OUTPUT_DIR/public/" 2>/dev/null || true
 fi
 
-# 复制启动脚本
+# 复制启动脚本并修改端口
 echo "📋 Copying server script..."
 cp server.js "$OUTPUT_DIR/"
+
+# 修改端口为 3001
+echo "🔧 Setting port to 3001..."
+sed -i '' 's/|| 3000/|| 3001/g' "$OUTPUT_DIR/server.js"
 
 # 创建生产 package.json
 echo "📝 Creating production package.json..."

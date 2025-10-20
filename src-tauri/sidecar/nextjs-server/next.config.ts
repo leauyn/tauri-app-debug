@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // 压缩
   compress: true,
+  // 设置输出文件跟踪根目录，避免工作区检测问题
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;

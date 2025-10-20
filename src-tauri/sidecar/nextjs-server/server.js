@@ -2,7 +2,7 @@ const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
 
-const port = process.env.PORT || 3007;
+const port = process.env.PORT || 3001;
 const dev = false; // 生产模式
 const app = next({ dev, dir: __dirname });
 const handle = app.getRequestHandler();
